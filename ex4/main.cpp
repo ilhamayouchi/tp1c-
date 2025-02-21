@@ -2,7 +2,7 @@
 
 using namespace std;
 
-#include <iostream>
+
 
 int main() {
     int matrice[3][4] = {
