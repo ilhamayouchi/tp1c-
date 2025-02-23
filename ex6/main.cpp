@@ -1,20 +1,20 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
-
 int main() {
-    vector<vector<int>> tableau = {
-        {1, 2, 3},
+    int tableau[3][4] = {
+        {1, 2, 3, 0}, 
         {4, 5, 6, 7},
-        {8, 9}
+        {8, 9, 0, 0}  
     };
-    for (size_t i = 0; i < tableau.size(); ++i) {
+    int colonnes_par_ligne[3] = {3, 4, 2}; 
+
+    for (int i = 0; i < 3; ++i) {
         int somme = 0;
-        for (size_t j = 0; j < tableau[i].size(); ++j) {
+        for (int j = 0; j < colonnes_par_ligne[i]; ++j) {
             somme += tableau[i][j];
         }
-        cout << "Somme de la ligne " << (i + 1) << " : " << somme << endl;
+        cout << "Somme de la ligne " << (i + 1) << " : " << somme ;
     }
 
     return 0;
